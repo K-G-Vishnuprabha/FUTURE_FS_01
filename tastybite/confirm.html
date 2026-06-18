@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order Confirmation</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:50px;">
+
+<h1>🎉 Order Confirmed!</h1>
+
+<p>Item: <span id="item"></span></p>
+<p>Quantity: <span id="qty"></span></p>
+<p>Total: ₹<span id="total"></span></p>
+<p>Name: <span id="name"></span></p>
+<p>Address: <span id="address"></span></p>
+<p>Payment: <span id="payment"></span></p>
+
+<p>🍕 Your order will be delivered in 20-45 minutes.</p>
+
+<button onclick="window.location.href='index.html'">
+Back to Menu
+</button>
+
+<script>
+document.getElementById("item").innerText =
+localStorage.getItem("item");
+
+document.getElementById("qty").innerText =
+localStorage.getItem("qty");
+
+document.getElementById("total").innerText =
+localStorage.getItem("total");
+
+document.getElementById("name").innerText =
+localStorage.getItem("name");
+
+document.getElementById("address").innerText =
+localStorage.getItem("address");
+
+document.getElementById("payment").innerText =
+localStorage.getItem("payment");
+</script>
+
+</body>
+</html>

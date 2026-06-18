@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Place Order</title>
+<style>
+body{
+    font-family: Arial;
+    background:#fff9f4;
+}
+
+.form-box{
+    width:400px;
+    margin:50px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:brown;
+    color:white;
+    border:none;
+    padding:10px 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="form-box">
+
+<h2>Place Your Order</h2>
+
+<p><strong>Item:</strong> <span id="item"></span></p>
+<p><strong>Price:</strong> ₹<span id="price"></span></p>
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<textarea id="address" placeholder="Enter Address"></textarea>
+
+<input type="number" id="qty" placeholder="Quantity">
+
+<h3>Payment Method</h3>
+
+<input type="radio" name="payment" value="Cash"> Cash<br>
+<input type="radio" name="payment" value="UPI"> UPI<br><br>
+
+<button onclick="confirmOrder()">Confirm Order</button>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("item").innerText =
+params.get("item");
+
+document.getElementById("price").innerText =
+params.get("price");
+
+function confirmOrder(){
+
+let item = params.get("item");
+let price = params.get("price");
+
+let name =
+document.getElementById("name").value;
+
+let address =
+document.getElementById("address").value;
+
+let qty =
+document.getElementById("qty").value;
+
+let payment =
+document.querySelector('input[name="payment"]:checked').value;
+
+let total = price * qty;
+
+localStorage.setItem("item",item);
+localStorage.setItem("price",price);
+localStorage.setItem("qty",qty);
+localStorage.setItem("total",total);
+localStorage.setItem("name",name);
+localStorage.setItem("address",address);
+localStorage.setItem("payment",payment);
+
+window.location.href="confirm.html";
+}
+
+</script>
+
+</body>
+</html>

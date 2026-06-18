@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- <script>
+function ordernow(itemName, price) {
+
+    let name = prompt("Enter your Name:");
+    if (!name) return;
+
+    let address = prompt("Enter your Address:");
+    if (!address) return;
+
+    let qty = prompt("Enter Quantity:");
+    if (!qty || qty <= 0) return;
+
+    let payment = prompt("Payment Method? (Cash / UPI):");
+    if (!payment) return;
+
+    let total = price * qty;
+
+   if (payment.toLowerCase() === "upi") {
+    alert("💰 Pay via UPI: ₹" + total);
+   }
+
+    localStorage.setItem("item", itemName);
+    localStorage.setItem("qty", qty);
+    localStorage.setItem("total", total);
+    localStorage.setItem("name", name);
+    localStorage.setItem("address", address);
+    localStorage.setItem("payment", payment);
+
+    window.location.href = "order.html";
+}
+</script> -->
+
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <h1>TASTY BITE</h1>
+    </header>
+
+    <section class="banner">
+        <img src="banner.jpg" alt="Tasty Bite image">
+    </section>
+
+    <section class="about-section" id="about">
+        <h2>About Tasty Bite</h2>
+
+        <div class="aboutcontent">
+            <p> Welcome to Tasty Bite, where delicious food meets exceptional service.
+                We are passionate about serving fresh, high-quality meals prepared with
+                the finest ingredients. Our goal is to provide customers with a memorable
+                dining experience through great taste, hygiene, and friendly hospitality.<br><br>
+                From mouth-watering burgers and pizzas to traditional favorites, our menu
+                is designed to satisfy every food lover. Whether you're dining with family,
+                friends, or ordering from home, Tasty Bite is committed to delivering
+                flavor, quality, and satisfaction in every bite.
+                <br><br>
+                Thank you for choosing Tasty Bite. We look forward to serving you and
+                making every meal a special one.
+            </p>
+            <div>
+                <img src="about.jpg" alt="about image" class="about-img">
+                </p>
+
+            </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <h2>Our Menu</h2>
+
+        <div class="menu-item">
+            <img src="pizza1.jpg" alt="margpizza" class="menu-img">
+            <span class="dish-name"> Margrita Pizza</span>
+            <p><b>&#8377; 120</b></p>
+            <button onclick="window.location.href='order.html?item=Margrita Pizza&price=120'">Order Now</button>
+        </div>
+
+        <div class="menu-item">
+            <img src="pizza2.jpg" alt="paneer pizza" class="menu-img">
+
+            <span class="dish-name">peppy paneer</span>
+            <p><b>&#8377; 120</b></p>
+            <button onclick="window.location.href='order.html?item=Peppy Paneer&price=120'">
+                Order Now
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <img src="sandwich.jpg" alt="sandwich" class="menu-img">
+            <span class="dish-name"> Grilled sandwich</span>
+            <p><b>&#8377; 80</b></p>
+            <button onclick="window.location.href='order.html?item=Grilled Sandwich&price=80'">
+                Order Now
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <img src="burger.jpg" alt="burger" class="menu-img">
+            <span class="dish-name">Cheese Burger</span>
+            <p><b>&#8377; 90</b></p>
+            <button onclick="window.location.href='order.html?item=Cheese Burger&price=90'">
+                Order Now
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <img src="pasta.jpg" alt="pasta" class="menu-img">
+            <span class="dish-name">White Sauce Pasta</span>
+            <p><b>&#8377; 100</b></p>
+            <button onclick="window.location.href='order.html?item=White Sauce Pasta&price=100'">
+                Order Now
+            </button>
+        </div>
+        <div class="menu-item">
+            <img src="frenchfries.jpg" alt="French Fries" class="menu-img">
+            <span class="dish-name">French Fries</span>
+            <p><b>&#8377; 60</b></p>
+            <button onclick="window.location.href='order.html?item=French Fries&price=60'">
+                Order Now
+            </button>
+        </div>
+
+        <div class="menu-item">
+            <img src="coldcoffee.jpg" alt="Cold Coffee" class="menu-img">
+            <span class="dish-name">Cold Coffee</span>
+            <p><b>&#8377; 70</b></p>
+            <button onclick="window.location.href='order.html?item=Cold Coffee&price=70'">
+                Order Now
+            </button>
+        </div>
+        <div class="menu-item">
+            <img src="mojito.jpg" alt="Mint Mojito" class="menu-img">
+            <span class="dish-name">Mint Mojito</span>
+            <p><b>&#8377; 60</b></p>
+            <button onclick="window.location.href='order.html?item=Mint Mojito&price=60'">
+                Order Now
+            </button>
+        </div>
+        <div class="menu-item">
+            <img src="bananamilkshake.jpg" alt="Banana Milk Shake" class="menu-img">
+            <span class="dish-name">Banana Milk Shake</span>
+            <p><b>&#8377; 60</b></p>
+            <button onclick="window.location.href='order.html?item=Banana Milk Shake&price=60'">
+                Order Now
+            </button>
+        </div>
+        <!-- <div id="message" class="order-confirmation"></div> -->
+
+    </section>
+
+    <section class="hours">
+        <h2>Opening Hours</h2>
+
+        <p>Monday - Friday : 10 AM - 10 PM</p>
+        <p>Saturday - Sunday : 9 AM - 11 PM</p>
+    </section>
+
+
+    <section class="reviews" id="reviews">
+        <h2>Customer Reviews</h2>
+
+        <div class="review-card">
+            <h3>Riya</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Amazing food and super fast delivery!</p>
+        </div>
+
+        <div class="review-card">
+            <h3>Akhil</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>Best pizza I ever had. Loved it!</p>
+        </div>
+
+        <div class="review-card">
+            <h3>Neha</h3>
+            <p>⭐⭐⭐⭐</p>
+            <p>Great taste and good customer service.</p>
+        </div>
+    </section>
+
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>📞 +91 9876543210</p>
+        <p>📧 tastybite@gmail.com</p>
+        <p>📍 Ernakulam, Kerala</p>
+    </section>
+
+</body>
+
+</html>
